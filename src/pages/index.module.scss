@@ -58,6 +58,7 @@
 	padding: 1rem 0;
 	animation: moveSearchBar 0.5s ease-in-out;
 	align-items: flex-start;
+	z-index: 99999;
 	@include tablet {
 		width: 358px;
 	}
