@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import closeIcon from '../../assets/img/close.svg'
 import styles from './ImageCard.module.scss'
 
 interface ImageCardProps {
@@ -36,6 +37,17 @@ export default function ImageCard({ photo }: ImageCardProps) {
 			</div>
 			{zoomed && (
 				<div className={styles.modal} onClick={() => setZoomed(false)}>
+					<button
+						className={styles.closeBtn}
+						onClick={(e) => {
+							e.stopPropagation()
+							setZoomed(false)
+						}}
+						aria-label='Закрыть'
+						type='button'
+					>
+						<Image src={closeIcon} alt='Закрыть' width={28} height={28} />
+					</button>
 					<Image
 						src={imageUrl}
 						alt={photo.alt_description || 'Unsplash image'}
