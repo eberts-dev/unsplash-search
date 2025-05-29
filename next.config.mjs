@@ -5,7 +5,7 @@ const nextConfig = {
 		styledComponents: true,
 	},
 	typescript: {
-		ignoreBuildErrors: false, // измените на true временно, если есть ошибки
+		ignoreBuildErrors: false,
 	},
 	eslint: {
 		ignoreDuringBuilds: true,
