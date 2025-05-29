@@ -1,6 +1,17 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
+@keyframes fadeInGrid {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .wrapper {
 	max-width: 1265px;
 	margin: 0 auto;
@@ -29,6 +40,9 @@
 	@include tablet {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
+	}
+	@include mobile {
+		animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 }
 
