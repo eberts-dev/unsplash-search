@@ -16,7 +16,7 @@
 		max-width: 390px;
 	}
 	@include mobile {
-		padding-top: 90px;
+		padding-top: 0; // убираем отступ на мобильных, чтобы не было лишнего пространства при повторном поиске
 	}
 }
 
@@ -39,7 +39,7 @@
 .container.active {
 	padding-top: 5.5rem;
 	@include mobile {
-		padding-top: 5.625rem;
+		padding-top: 0; // убираем отступ при активном поиске на мобильных
 	}
 }
 
@@ -67,7 +67,6 @@
 	top: 1rem;
 	max-width: 1265px;
 	margin-bottom: 0;
-	background: $color-bg;
 	border-radius: 12px;
 	padding: 1rem 0;
 	animation: moveSearchBar 0.5s ease-in-out;
