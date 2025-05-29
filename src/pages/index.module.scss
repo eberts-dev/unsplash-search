@@ -8,7 +8,7 @@
 
 .section {
 	max-width: 1265px;
-	margin: 80px auto;
+	margin: 0 auto;
 	@include desktop {
 		max-width: 768px;
 	}
@@ -29,6 +29,7 @@
 	transition: padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	@include mobile {
 		max-width: 365px;
+		height: 50px;
 	}
 	@include small-mobile {
 		max-width: 265px;
@@ -48,6 +49,9 @@
 	color: $color-btn-info;
 	font-size: 0.95rem;
 	text-align: left;
+	@include tablet {
+		height: 200px;
+	}
 }
 
 .searchBarActive {
