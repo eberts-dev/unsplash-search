@@ -1,0 +1,95 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.bg {
+	min-height: 100vh;
+	background: #f9fafb;
+}
+
+.section {
+	max-width: 1265px;
+	margin: 0 auto;
+	@include desktop {
+		max-width: 768px;
+	}
+	@include tablet {
+		max-width: 390px;
+	}
+}
+
+.container {
+	max-width: 1265px;
+	margin: 0 auto;
+	/* padding: 17.25rem 0 0; */
+	position: relative;
+	top: 17.25rem;
+	margin-bottom: 1rem;
+	transition: padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	@include mobile {
+		max-width: 365px;
+	}
+	@include small-mobile {
+		max-width: 265px;
+	}
+}
+
+.container.active {
+	padding-top: 5.5rem;
+	@include mobile {
+		padding-top: 5.625rem;
+	}
+}
+
+.hint {
+	font-size: 1rem;
+	margin-top: 3.5rem;
+	color: $color-btn-info;
+	font-size: 0.95rem;
+	text-align: left;
+}
+
+.searchBarActive {
+	position: fixed;
+	top: 1rem;
+	max-width: 1265px;
+	margin-bottom: 0;
+	background: $color-bg;
+	border-radius: 12px;
+	padding: 1rem 0;
+	animation: moveSearchBar 0.5s ease-in-out;
+	align-items: flex-start;
+	@include tablet {
+		width: 358px;
+	}
+	@include mobile {
+		/* width: 358px; */
+		width: calc(100% - 32px);
+		display: flex;
+		left: 0;
+		padding: 10px 16px;
+	}
+	@include small-mobile {
+		width: calc(100% - 32px);
+	}
+}
+
+@keyframes moveSearchBar {
+	0% {
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		transform: none;
+		opacity: 0.7;
+	}
+	100% {
+		top: 3%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		transform: none;
+		opacity: 1;
+	}
+}

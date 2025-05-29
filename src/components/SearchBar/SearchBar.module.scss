@@ -1,0 +1,78 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.searchBarContainer {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	width: 512px;
+	margin: 0 auto;
+	@include tablet {
+		max-width: 358px;
+	}
+	/* @include mobile {
+		max-width: 358px;
+	} */
+}
+
+.inputWrapper {
+	position: relative;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	@include mobile {
+		max-width: 358px;
+		margin: 0 auto;
+	}
+}
+
+.input {
+	width: 100%;
+	padding: 0.75rem 1.25rem 0.75rem 2.5rem;
+	border: none;
+	border-radius: 12px;
+	background: $color-bg-input;
+	font-size: 1.1rem;
+	color: $color-text-input;
+	outline: none;
+	transition: box-shadow 0.2s;
+	@include mobile {
+		max-width: 268px;
+	}
+}
+.input:hover {
+	cursor: pointer;
+	background: $color-input-focus;
+}
+
+.searchIcon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.2rem;
+	height: 1.2rem;
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.button {
+	background: $color-btn;
+	color: $color-btn-text;
+	border: none;
+	border-radius: 12px;
+	width: 5.125rem;
+	padding: 0.938rem 0;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.button:hover {
+	background: $color-btn-hover;
+}
+
+.input::placeholder {
+	color: $color-placeholder;
+	opacity: 1;
+}

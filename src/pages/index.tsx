@@ -1,0 +1,32 @@
+import { useState } from 'react'
+import ImageGrid from '../components/ImageGrid/ImageGrid'
+import SearchBar from '../components/SearchBar/SearchBar'
+import styles from './index.module.scss'
+
+export default function Home() {
+	const [searchQuery, setSearchQuery] = useState('')
+
+	return (
+		<div className={styles.bg}>
+			<div className={styles.section}>
+				<div
+					className={
+						searchQuery
+							? `${styles.container} ${styles.active}`
+							: styles.container
+					}
+				>
+					<div
+						className={
+							styles.searchBarContainer +
+							(searchQuery ? ' ' + styles.searchBarActive : '')
+						}
+					>
+						<SearchBar onSearch={setSearchQuery} />
+					</div>
+				</div>
+				{searchQuery && <ImageGrid query={searchQuery} />}
+			</div>
+		</div>
+	)
+}
