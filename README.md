@@ -5,20 +5,20 @@
 ## Структура проекта
 
 ```
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── img/
-│   ├── components/
-│   │   ├── ImageCard/
-│   │   ├── ImageGrid/
-│   │   └── SearchBar/
-│   ├── pages/
-│   └── styles/
+├── public/                # Статические файлы (favicons и т.д.)
+├── src/                   # Исходный код приложения
+│   ├── assets/            # Вспомогательные ресурсы
+│   │   └── img/           # SVG-иконки
+│   ├── components/        # React-компоненты
+│   │   ├── ImageCard/     # Карточка изображения
+│   │   ├── ImageGrid/     # Сетка изображений
+│   │   └── SearchBar/     # Поисковая строка
+│   ├── pages/             # Next.js страницы (index.tsx и стили)
+│   └── styles/            # SCSS (переменные, миксины)
 ├── package.json
 ├── tsconfig.json
 ├── next.config.mjs
-└── README.md
+└── README.md              # Документация проекта
 ```
 
 ## Технологии
