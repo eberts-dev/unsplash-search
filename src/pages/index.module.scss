@@ -14,7 +14,9 @@
 	}
 	@include tablet {
 		max-width: 390px;
-		height: 6rem;
+	}
+	@include mobile {
+		padding-top: 90px;
 	}
 }
 
@@ -48,6 +50,17 @@
 	font-size: 0.95rem;
 	text-align: left;
 }
+
+/* .searchBarContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	z-index: 10;
+} */
 
 .searchBarActive {
 	position: fixed;
