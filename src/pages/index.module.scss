@@ -88,6 +88,7 @@
 
 .section.search-active {
 	@include mobile {
-		padding-top: 70px;
+		margin-top: 70px;
+		/* padding-top: 70px; */
 	}
 }

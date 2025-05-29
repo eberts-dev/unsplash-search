@@ -41,9 +41,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
 	}
-	@include mobile {
-		animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-	}
+	animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .noResults {
