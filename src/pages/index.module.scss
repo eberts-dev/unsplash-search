@@ -48,9 +48,8 @@
 	margin: 0 auto;
 	max-width: 1265px;
 	margin-bottom: 0;
-	border-radius: 12px;
 	padding: 1rem 0;
-	animation: moveSearchBar 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	background: $color-bg-input, repeat-x;
 	align-items: flex-start;
 	z-index: 100;
 	@include tablet {
@@ -64,17 +63,6 @@
 	}
 	@include small-mobile {
 		width: calc(100% - 32px);
-	}
-}
-
-@keyframes moveSearchBar {
-	0% {
-		transform: translateY(-100%);
-		opacity: 0.7;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
 	}
 }
 
