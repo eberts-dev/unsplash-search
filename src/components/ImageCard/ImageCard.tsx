@@ -54,7 +54,6 @@ export default function ImageCard({ photo }: ImageCardProps) {
 						width={767.47}
 						height={760}
 						className={styles.modalImg}
-						style={{ objectFit: 'contain' }}
 						priority
 					/>
 				</div>
