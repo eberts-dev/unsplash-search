@@ -3,7 +3,6 @@
 
 .bg {
 	min-height: 100vh;
-	/* background: #f9fafb; */
 }
 
 .section {
@@ -15,13 +14,12 @@
 	@include tablet {
 		max-width: 390px;
 	}
-	/* @include mobile {
-		
-	} */
 }
 
 .container {
 	max-width: 1265px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
 	position: relative;
 	top: 17.25rem;
 	margin-bottom: 5rem;
@@ -33,13 +31,6 @@
 		max-width: 265px;
 	}
 }
-
-/* .container.active {
-	padding-top: 5.5rem;
-	@include mobile {
-		padding-top: 70px; // фиксированный отступ под поисковую строку на мобильных
-	}
-} */
 
 .hint {
 	font-size: 1rem;
@@ -88,8 +79,8 @@
 	}
 }
 
-/* .section.search-active {
+.section.search-active {
 	@include mobile {
 		margin: 80px auto;
 	}
-} */
+}
