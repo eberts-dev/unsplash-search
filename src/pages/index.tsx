@@ -8,7 +8,13 @@ export default function Home() {
 
 	return (
 		<div className={styles.bg}>
-			<div className={styles.section}>
+			<div
+				className={
+					searchQuery
+						? `${styles.section} ${styles['search-active']}`
+						: styles.section
+				}
+			>
 				<div
 					className={
 						searchQuery

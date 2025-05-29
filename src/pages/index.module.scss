@@ -107,3 +107,9 @@
 		opacity: 1;
 	}
 }
+
+.section.search-active {
+	@include mobile {
+		padding-top: 70px;
+	}
+}
