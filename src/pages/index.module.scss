@@ -16,14 +16,13 @@
 		max-width: 390px;
 	}
 	@include mobile {
-		padding-top: 0; // убираем отступ на мобильных, чтобы не было лишнего пространства при повторном поиске
+		padding-top: 0;
 	}
 }
 
 .container {
 	max-width: 1265px;
 	margin: 0 auto;
-	/* padding: 17.25rem 0 0; */
 	position: relative;
 	top: 17.25rem;
 	margin-bottom: 1rem;
@@ -39,7 +38,7 @@
 .container.active {
 	padding-top: 5.5rem;
 	@include mobile {
-		padding-top: 0; // убираем отступ при активном поиске на мобильных
+		padding-top: 1rem;
 	}
 }
 
@@ -51,17 +50,6 @@
 	text-align: left;
 }
 
-/* .searchBarContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.5rem;
-	margin-bottom: 2rem;
-	transition: all 0.5s ease-in-out;
-	position: relative;
-	z-index: 10;
-} */
-
 .searchBarActive {
 	position: fixed;
 	top: 0;
@@ -72,12 +60,11 @@
 	padding: 1rem 0;
 	animation: moveSearchBar 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	align-items: flex-start;
-	z-index: 99999;
+	z-index: 100;
 	@include tablet {
 		width: 358px;
 	}
 	@include mobile {
-		/* width: 358px; */
 		width: calc(100% - 32px);
 		display: flex;
 		left: 0;

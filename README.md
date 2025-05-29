@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unsplash Search
 
-## Getting Started
+Поисковик изображений на базе Unsplash API с адаптивной версткой и современным UI.
 
-First, run the development server:
+## Структура проекта
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── img/
+│   ├── components/
+│   │   ├── ImageCard/
+│   │   ├── ImageGrid/
+│   │   └── SearchBar/
+│   ├── pages/
+│   └── styles/
+├── package.json
+├── tsconfig.json
+├── next.config.mjs
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технологии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 14
+- React 18
+- TypeScript
+- SCSS-модули (с переменными и миксинами)
+- Адаптивная верстка (mobile first)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Особенности
 
-## Learn More
+- Поиск работает только по латинским символам (английский язык). Русские запросы не поддерживаются Unsplash API.
+- Плавная анимация, адаптивность под мобильные устройства.
 
-To learn more about Next.js, take a look at the following resources:
+## Демо
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Готовый проект на Vercel](https://unsplash-search-beta.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Быстрый старт
 
-## Deploy on Vercel
+```bash
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.

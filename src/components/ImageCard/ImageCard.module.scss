@@ -68,7 +68,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 999999;
+	z-index: 1000;
 	cursor: pointer;
 	animation: fadeIn 0.2s;
 }
@@ -76,8 +76,12 @@
 .modalImg {
 	object-fit: cover;
 	position: absolute;
-	top: 0;
+	top: 2.5rem;
 	max-height: 90vh;
+	max-width: 100vw;
+	@include tablet {
+		top: 0;
+	}
 }
 
 .modalImg:hover {
