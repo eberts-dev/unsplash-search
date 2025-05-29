@@ -29,18 +29,18 @@
 	padding: 0 2.5rem;
 	border: none;
 	border-radius: 12px;
-	background: $color-bg-input;
+	background: $color-input;
 	font-size: 1rem;
 	color: $color-text-input;
 	outline: none;
 	transition: box-shadow 0.2s;
+	&:hover {
+		cursor: pointer;
+		background: $color-input-hover;
+	}
 	@include mobile {
 		max-width: 268px;
 	}
-}
-.input:hover {
-	cursor: pointer;
-	background: $color-input-focus;
 }
 
 .searchIcon {
@@ -62,7 +62,6 @@
 	width: 5.125rem;
 	padding: 0.938rem 0;
 	font-size: 1rem;
-	font-weight: 500;
 	cursor: pointer;
 	transition: background 0.2s;
 }
