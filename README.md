@@ -37,12 +37,3 @@
 ## Демо
 
 [Готовый проект на Vercel](https://unsplash-search-beta.vercel.app/)
-
-## Быстрый старт
-
-```bash
-npm install
-npm run dev
-```
-
-Откройте [http://localhost:3000](http://localhost:3000) в браузере.
