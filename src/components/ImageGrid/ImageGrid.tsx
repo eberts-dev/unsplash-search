@@ -39,7 +39,7 @@ export default function ImageGrid({ query }: { query: string }) {
 					client_id: ACCESS_KEY,
 					query: searchQuery,
 					page: '1',
-					per_page: '20',
+					per_page: '10',
 					orientation: 'squarish',
 				})
 				const url = `https://api.unsplash.com/search/photos?${params.toString()}`

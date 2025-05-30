@@ -1,3 +1,5 @@
+@use './variables.scss' as *;
+
 @mixin small-mobile {
 	@media (max-width: $breakpoint-small-mobile) {
 		@content;

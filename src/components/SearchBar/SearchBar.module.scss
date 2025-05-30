@@ -1,14 +1,18 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 .searchBarContainer {
 	display: flex;
 	align-items: center;
+	justify-self: center;
 	gap: 0.5rem;
 	width: 512px;
-	margin: 0 auto;
+	background: $color-bg-input;
 	@include tablet {
 		max-width: 358px;
+	}
+	@include mobile {
+		width: 100%;
 	}
 }
 
