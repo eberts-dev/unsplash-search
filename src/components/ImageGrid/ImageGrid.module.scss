@@ -27,14 +27,15 @@
 	align-items: center;
 	gap: 0.34rem;
 	@include desktop {
-		width: 845px;
+		width: 841px;
 	}
 	@include tablet {
-		width: 390px;
+		width: 358px;
 		display: grid;
+		gap: 0.5rem;
 		grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
 	}
-	animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	/* animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
 	@include mobile {
 		width: 358px;
 	}
