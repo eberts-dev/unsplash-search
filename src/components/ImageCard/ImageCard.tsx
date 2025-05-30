@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import closeIcon from '../../assets/img/close.svg'
 import styles from './ImageCard.module.scss'
 
@@ -14,6 +14,17 @@ export default function ImageCard({ photo }: ImageCardProps) {
 	const imageUrl = photo.urls.regular
 	const [loaded, setLoaded] = useState(false)
 	const [zoomed, setZoomed] = useState(false)
+
+	useEffect(() => {
+		if (zoomed) {
+			document.body.style.overflow = 'hidden'
+			return () => {
+				document.body.style.overflow = ''
+			}
+		} else {
+			document.body.style.overflow = ''
+		}
+	}, [zoomed])
 
 	return (
 		<>

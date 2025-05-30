@@ -24,13 +24,21 @@ export default function Home() {
 				>
 					<div
 						className={
-							styles.searchBarContainer +
-							(searchQuery ? ' ' + styles.searchBarActive : '')
+							searchQuery
+								? [
+										styles.searchBarContainer,
+										styles.searchBarContainerActive,
+								  ].join(' ')
+								: [
+										styles.searchBarContainer,
+										styles.searchBarContainerInactive,
+								  ].join(' ')
 						}
 					>
 						<SearchBar onSearch={setSearchQuery} />
 					</div>
 				</div>
+
 				{searchQuery && <ImageGrid query={searchQuery} />}
 			</div>
 		</div>

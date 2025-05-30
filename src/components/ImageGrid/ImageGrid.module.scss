@@ -1,16 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
-
-@keyframes fadeInGrid {
-	0% {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 .wrapper {
 	max-width: 1265px;
@@ -35,13 +24,21 @@
 .grid {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: center;
-	gap: 0.3rem;
+	gap: 0.34rem;
+	@include desktop {
+		width: 845px;
+	}
 	@include tablet {
+		width: 390px;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
 	}
 	animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	@include mobile {
+		width: 358px;
+	}
 }
 
 .noResults {
@@ -55,4 +52,15 @@
 	align-items: center;
 	height: 100%;
 	color: $color-text-secondary;
+}
+
+@keyframes fadeInGrid {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

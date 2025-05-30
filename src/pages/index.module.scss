@@ -1,5 +1,5 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .bg {
 	min-height: 100vh;
@@ -8,9 +8,8 @@
 .section {
 	max-width: 1265px;
 	margin: 0 auto;
-	@include desktop {
-		max-width: 768px;
-	}
+	display: flex;
+	flex-direction: column;
 	@include tablet {
 		max-width: 390px;
 	}
@@ -18,17 +17,15 @@
 
 .container {
 	max-width: 1265px;
-	margin: 0 auto;
-	position: relative;
-	top: 17.25rem;
-	margin-bottom: 5rem;
-	transition: padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-	@include mobile {
-		max-width: 365px;
-	}
-	@include small-mobile {
-		max-width: 265px;
-	}
+	position: sticky;
+	top: 0;
+	z-index: 101;
+	margin-top: 17.25rem;
+	transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container.active {
+	top: 0;
 }
 
 .hint {
@@ -43,14 +40,9 @@
 }
 
 .searchBarActive {
-	position: fixed;
-	top: 0;
-	margin: 0 auto;
-	max-width: 1265px;
-	margin-bottom: 0;
-	padding: 1rem 0;
-	background: $color-bg-input, repeat-x;
-	align-items: flex-start;
+	position: sticky;
+	width: 100%;
+	padding: 2.5rem 0 1rem;
 	z-index: 100;
 	@include tablet {
 		width: 358px;
@@ -58,7 +50,6 @@
 	@include mobile {
 		width: calc(100% - 32px);
 		display: flex;
-		left: 0;
 		padding: 10px 16px;
 	}
 	@include small-mobile {
@@ -66,8 +57,11 @@
 	}
 }
 
-.section.search-active {
-	@include mobile {
-		margin: 80px auto;
-	}
+.searchBarContainerActive {
+	padding: 2.5rem 0 1rem;
+	background: $color-bg-input;
+}
+
+.searchBarContainerInactive {
+	padding: 2.5rem 0 1rem;
 }
