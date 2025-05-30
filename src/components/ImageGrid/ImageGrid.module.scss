@@ -35,7 +35,6 @@
 		gap: 0.5rem;
 		grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
 	}
-	/* animation: fadeInGrid 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
 	@include mobile {
 		width: 358px;
 	}
