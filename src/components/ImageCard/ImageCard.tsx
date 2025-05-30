@@ -17,12 +17,27 @@ export default function ImageCard({ photo }: ImageCardProps) {
 
 	useEffect(() => {
 		if (zoomed) {
+			// Блок скролл на всех устройствах, включая iOS
+			const originalOverflow = document.body.style.overflow
+			const originalPosition = document.body.style.position
 			document.body.style.overflow = 'hidden'
+			document.body.style.position = 'fixed'
+			document.body.style.width = '100%'
+			// Для iOS: сохраняем текущий скролл и возвращаем после закрытия
+			const scrollY = window.scrollY
+			document.body.style.top = `-${scrollY}px`
 			return () => {
-				document.body.style.overflow = ''
+				document.body.style.overflow = originalOverflow
+				document.body.style.position = originalPosition
+				document.body.style.width = ''
+				document.body.style.top = ''
+				window.scrollTo(0, scrollY)
 			}
 		} else {
 			document.body.style.overflow = ''
+			document.body.style.position = ''
+			document.body.style.width = ''
+			document.body.style.top = ''
 		}
 	}, [zoomed])
 

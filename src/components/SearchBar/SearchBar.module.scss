@@ -40,6 +40,7 @@
 		background: $color-input-hover;
 	}
 	@include mobile {
+		padding-right: 1rem;
 		max-width: 268px;
 	}
 }
