@@ -71,3 +71,21 @@
 .searchBarContainerInactive {
 	padding: 2.5rem 0 1rem;
 }
+
+.searchBarContainer {
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+		justify-content 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	justify-content: flex-start;
+}
+
+.searchBarContainerActive {
+	transform: translateX(-23.5rem);
+	justify-content: flex-start;
+	align-items: flex-start;
+	@include desktop {
+		transform: translateX(-8rem);
+	}
+	@include tablet {
+		transform: translateX(0);
+	}
+}
