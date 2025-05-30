@@ -11,9 +11,6 @@
 	@include tablet {
 		max-width: 358px;
 	}
-	@include mobile {
-		width: 100%;
-	}
 }
 
 .inputWrapper {
