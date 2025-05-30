@@ -13,6 +13,9 @@
 	@include tablet {
 		max-width: 390px;
 	}
+	@include mobile {
+		max-width: 358px;
+	}
 }
 
 .container {
