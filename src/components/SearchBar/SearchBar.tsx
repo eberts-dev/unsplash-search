@@ -33,7 +33,7 @@ export default function SearchBar({ onSearch, inputProps }: SearchBarProps) {
 				<input
 					className={styles.input}
 					type='text'
-					placeholder='Телефоны, яблоки, груши...'
+					placeholder='apple, mobile, cars...'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					{...inputProps}
